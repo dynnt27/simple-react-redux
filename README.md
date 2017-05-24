@@ -1,7 +1,8 @@
 My Project
 ---
  
-Welcome.
+Welcome to a simple react-redux app with webpack, babel, npm, and express.
+Feed your pet with fish, beef, chicken. Check the state using redux-devtools chrome.
  
  
 Usage
