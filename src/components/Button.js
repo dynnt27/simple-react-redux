@@ -17,12 +17,6 @@ class Button extends React.PureComponent {
   }
 }
 
-function mapStateToProps(state) {
-    return {
-        selectedAnimal: state.selectedAnimal
-    }
-}
-
 function mapDispatchToProps(dispatch) {
     return {
         onFeedAnimal: () => dispatch(feedAnimal())
@@ -31,4 +25,4 @@ function mapDispatchToProps(dispatch) {
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Button);
+export default connect(null, mapDispatchToProps)(Button)

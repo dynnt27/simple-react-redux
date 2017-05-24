@@ -1,12 +1,11 @@
 const FEED_ANIMAL = 'FEED_ANIMAL'
-const FEED_ANIMAL_START = 'FEED_ANIMAL_START'
+const FEED_ANIMAL_SELECT = 'FEED_ANIMAL_SELECT'
 
-export const feedAnimal = (feed) => ({
-	type: FEED_ANIMAL,
-	feed
+export const feedAnimal = () => ({
+	type: FEED_ANIMAL
 })
 
 export const selectFeedAnimalStart = (target) => ({
-	type: FEED_ANIMAL_START,
+	type: FEED_ANIMAL_SELECT,
 	target
 })

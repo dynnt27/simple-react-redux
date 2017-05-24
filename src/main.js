@@ -21,12 +21,12 @@ const feed = (state = initialState, action) => {
 				feedHistory: state.selectedAnimal,
 				isFull: state.feedTaken > 6 ? true : false
 			})
-		case "FEED_ANIMAL_START":
+		case "FEED_ANIMAL_SELECT":
 			return Object.assign({}, state, {
 				selectedAnimal: action.targetAnimal
 			})
 		default:
-			return state;
+			return state
 	}
 }
 
