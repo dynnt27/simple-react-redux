@@ -21,7 +21,7 @@ class Dropdown extends React.PureComponent {
   }
 
   render() {
-  	const { selectId } = this.props;
+  	const { selectId } = this.props
     return <div>
     		<select id={selectId} onChange={this.onSelectAnimal.bind(this)}>
     			{
@@ -38,7 +38,7 @@ class Dropdown extends React.PureComponent {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onAnimalSelectChange: () => dispatch(selectFeedAnimalStart())
+    onAnimalSelectChange: (targetAnimal) => dispatch(selectFeedAnimalStart(targetAnimal))
   }
 }
 

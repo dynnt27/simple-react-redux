@@ -11,7 +11,7 @@ class FeedHistory extends React.PureComponent {
 
         			feedHistory.map((item) => {
         				return <p>
-        					{`You have fed him ${item} +1`}
+        					{`You have fed him ${ item } +1`}
         				</p>
         			})
                 

@@ -18,12 +18,13 @@ const feed = (state = initialState, action) => {
 		case "FEED_ANIMAL":
 			return Object.assign({}, state, {
 				feedTaken: state.feedTaken + 1,
-				feedHistory: state.selectedAnimal,
+				feedHistory: [...state.feedHistory, state.selectedAnimal],
 				isFull: state.feedTaken > 6 ? true : false
 			})
 		case "FEED_ANIMAL_SELECT":
+		console.log(action)
 			return Object.assign({}, state, {
-				selectedAnimal: action.targetAnimal
+				selectedAnimal: action.target
 			})
 		default:
 			return state
