@@ -1,13 +1,41 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM, { render } from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 import App from './containers/App.js';
-import reducer from './reducers/index.js';
+// import reducer, { initialState } from './reducers/index.js';
 
+const initialState = {
+	feedTaken: 0,
+	feedHistory: [],
+	isFull: false,
+	selectedAnimal: '',
+}
 
-const store = createStore(reducer);
+const feed = (state = initialState, action) => {
+	switch (action.type) {
+		case "FEED_ANIMAL":
+			return Object.assign({}, state, {
+				feedTaken: state.feedTaken + 1,
+				feedHistory: state.selectedAnimal,
+				isFull: state.feedTaken > 6 ? true : false
+			})
+		case "FEED_ANIMAL_START":
+			return Object.assign({}, state, {
+				selectedAnimal: action.targetAnimal
+			})
+		default:
+			return state;
+	}
+}
+
+console.log(initialState)
+console.log(feed)
+
+// create store accepts 3 parameters, (reducer, initalState, devtool)
+const store = createStore(feed, initialState, 
+	window.devToolsExtension ? window.devToolsExtension() : undefined);
 
 render (
   <Provider store={store}>
@@ -15,9 +43,3 @@ render (
   </Provider>,
   document.getElementById('root')
 )
-// document.addEventListener('DOMContentLoaded', function() {
-//   ReactDOM.render(
-//     React.createElement(App),
-//     document.getElementById('root')
-//   );
-// });

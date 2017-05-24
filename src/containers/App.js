@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { connect } from 'react-redux'
+import HomePage from "./HomePage.js"
 
 class App extends React.Component {
   render() {
     return <div>
-          Hello world
-        </div>;
+    		<HomePage />
+    	</div>;
   }
 }
+
 
 export default App;
