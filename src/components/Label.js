@@ -9,7 +9,7 @@ class Label extends React.PureComponent {
 
     return 	<div> 
 				<p>{`Animal full? ${ isFull }`} </p>
-        <p>{`Selected Animal: ${ selectedAnimal }`} </p>
+        <p>{`Selected food: ${ selectedAnimal }`} </p>
 			</div>
   }
 }
