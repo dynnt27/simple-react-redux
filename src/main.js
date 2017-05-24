@@ -4,7 +4,6 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 import App from './containers/App.js';
-// import reducer, { initialState } from './reducers/index.js';
 
 const initialState = {
 	feedTaken: 0,

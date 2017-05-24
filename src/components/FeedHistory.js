@@ -9,8 +9,8 @@ class FeedHistory extends React.PureComponent {
     		{ 
                 feedHistory.length > 1 &&
 
-        			feedHistory.map((item) => {
-        				return <p>
+        			feedHistory.map((item, index) => {
+        				return <p key={index}>
         					{`You have fed him ${ item } +1`}
         				</p>
         			})

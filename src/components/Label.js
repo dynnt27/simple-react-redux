@@ -18,7 +18,7 @@ class Label extends React.PureComponent {
 function mapStateToProps(state) {
     return {
     	isFull: state.isFull,
-      selectedAnimal: state.selectedAnimal
+      	selectedAnimal: state.selectedAnimal
     }
 }
 

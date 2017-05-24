@@ -2,7 +2,7 @@ import React from 'react'
 import { selectFeedAnimalStart } from '../actions/index.js'
 import { connect } from 'react-redux'
 
-const animalFood = ['chicken', 'beef', 'php', 'laravel', 'apacheStruts']
+const animalFood = ['Chicken', 'Beef', 'Squid', 'Fish', 'Lamb']
 
 class Dropdown extends React.PureComponent {
 
