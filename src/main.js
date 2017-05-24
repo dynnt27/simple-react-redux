@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 
 import App from './containers/App.js';
 
+// @note: I declared this initial state
 const initialState = {
 	feedTaken: 0,
 	feedHistory: [],
@@ -12,6 +13,7 @@ const initialState = {
 	selectedAnimal: '',
 }
 
+// This is your main reducer (@note: this is just for now because it is a small app)
 const feed = (state = initialState, action) => {
 	switch (action.type) {
 		case "FEED_ANIMAL":
@@ -30,10 +32,7 @@ const feed = (state = initialState, action) => {
 	}
 }
 
-console.log(initialState)
-console.log(feed)
-
-// create store accepts 3 parameters, (reducer, initalState, devtool)
+// create store accepts 3 parameters, (/reducer/, initalState, /devtool/)
 const store = createStore(feed, initialState, 
 	window.devToolsExtension ? window.devToolsExtension() : undefined);
 
