@@ -7,7 +7,7 @@ class FeedHistory extends React.PureComponent {
     const { feedHistory } = this.props;
     return <div>
     		{ 
-                feedHistory.length > 1 &&
+                feedHistory.length >= 1 &&
 
         			feedHistory.map((item, index) => {
         				return <p key={index}>
