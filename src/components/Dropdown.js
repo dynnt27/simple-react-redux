@@ -8,8 +8,6 @@ class Dropdown extends React.PureComponent {
 
   constructor(props) {
     super(props)
-
-    // this.onAnimalSelectChange = this.onAnimalSelectChange.bind(this)
   }
 
   onSelectAnimal(event) {

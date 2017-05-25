@@ -26,6 +26,7 @@
     "webpack-dev-middleware": "^1.10.2"
   },
   "devDependencies": {
+    "extract-text-webpack-plugin": "^2.1.0",
     "redux-devtools": "^3.4.0"
   }
 }
