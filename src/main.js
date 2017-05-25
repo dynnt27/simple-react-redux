@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM, { render } from 'react-dom';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
+import React from 'react'
+import ReactDOM, { render } from 'react-dom'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
 
-import App from './containers/App.js';
+import App from './containers/App.js'
+import style from './main.scss'
 
 // @note: I declared this initial state
 const initialState = {
@@ -32,7 +33,7 @@ const feed = (state = initialState, action) => {
 	}
 }
 
-// create store accepts 3 parameters, (/reducer/, initalState, /devtool/)
+// create store accepts 3 parameters, (/reducer/, initialState, /devtool/)
 const store = createStore(feed, initialState, 
 	window.devToolsExtension ? window.devToolsExtension() : undefined);
 

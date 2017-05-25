@@ -21,18 +21,31 @@ module.exports = {
     }),
     new webpack.optimize.UglifyJsPlugin(), //minify everything
     new webpack.optimize.AggressiveMergingPlugin(),//Merge chunks 
+    new ExtractTextPlugin({
+          filename: 'style.css',
+          disable: false,
+          allChunks: true
+      }) // for sass
   ],
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
           presets:[ 'es2015', 'react', 'stage-2' ]
-        },
+        }
       },
-    ]
+      {
+        test: /\.scss$/, 
+        use: ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: ['css-loader','sass-loader'],
+            publicPath: '/dist'
+        })
+      },
+    ],
   },
   resolve: {
     modules: [

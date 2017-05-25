@@ -26,7 +26,10 @@
     "webpack-dev-middleware": "^1.10.2"
   },
   "devDependencies": {
+    "css-loader": "^0.28.2",
     "extract-text-webpack-plugin": "^2.1.0",
-    "redux-devtools": "^3.4.0"
+    "redux-devtools": "^3.4.0",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.18.1"
   }
 }
