@@ -1,2 +1,5 @@
-body {
-  background-color: green; }
+.green {
+  background-color: green;
+  height: 200px;
+  width: 200px;
+  text-align: center; }

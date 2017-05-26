@@ -4,6 +4,8 @@ const webpack = require('webpack')
 
  
 module.exports = {
+  cache: true,
+  devtool: 'eval-sourcemap',
   context: path.join(__dirname, 'src'),
   entry: [
     './main.js',
@@ -12,21 +14,6 @@ module.exports = {
     path: path.join(__dirname, 'www'),
     filename: 'bundle.js',
   },
-  // optimization
-  plugins: [
-    new webpack.DefinePlugin({ // <-- key to reducing React's size
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin(), //minify everything
-    new webpack.optimize.AggressiveMergingPlugin(),//Merge chunks 
-    new ExtractTextPlugin({
-          filename: 'style.css',
-          disable: false,
-          allChunks: true
-      }) // for sass
-  ],
   module: {
     rules: [
       {
@@ -51,5 +38,20 @@ module.exports = {
     modules: [
       path.join(__dirname, 'node_modules'),
     ],
-  }
+  },
+  // optimization
+  plugins: [
+    new webpack.DefinePlugin({ // <-- key to reducing React's size
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin(), //minify everything
+    new webpack.optimize.AggressiveMergingPlugin(),//Merge chunks 
+    new ExtractTextPlugin({
+          filename: 'style.css',
+          disable: false,
+          allChunks: true
+      }) // for sass
+  ]
 }

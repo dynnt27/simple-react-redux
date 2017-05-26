@@ -28,6 +28,7 @@
   "devDependencies": {
     "css-loader": "^0.28.2",
     "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.3",
     "redux-devtools": "^3.4.0",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.1"

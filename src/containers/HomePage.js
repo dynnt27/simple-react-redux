@@ -6,22 +6,25 @@ import Animal from '../components/Animal.js'
 import Label from '../components/Label.js'
 import FeedHistory from '../components/FeedHistory.js'
 
+import styles from './homePage.scss'
+
 class HomePage extends React.Component {
 	
   render() {
-    return <div>
+      return <div className={styles.green}>
 
-          <Dropdown selectId="feedSelection" />
-          <Button buttonId="submitFeed" 
-                  buttonName="Feed Now"/>
-          
-          <div>
-          	<Animal />
-            <Label />
-            <FeedHistory />
-          </div>
+              <Dropdown selectId="feedSelection" />
+              <Button buttonId="submitFeed" 
+                      buttonName="Feed Now"/>
+              
+              <div>
+                <h2>Animal Details</h2>
+              	<Animal /> 
+                <Label />
+                <FeedHistory />
+              </div>
 
-        </div>;
+            </div>;
   }
 }
 

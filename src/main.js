@@ -4,7 +4,6 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 import App from './containers/App.js'
-import style from './main.scss'
 
 // @note: I declared this initial state
 const initialState = {
